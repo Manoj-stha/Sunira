@@ -46,7 +46,7 @@ class Listing(models.Model):
     property=models.OneToOneField(Property, on_delete=models.CASCADE) 
     listed_at=models.DateTimeField(auto_now_add=True)
     is_sold=models.BooleanField(default=False)
-    is_feateured=models.BooleanField(default=False)
+    is_featured=models.BooleanField(default=False)
     
     def __str__(self):
         return f"Listing for {self.Property.title}"
