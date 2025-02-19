@@ -5,7 +5,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class User(AbstractUser):
     is_agent=models.BooleanField(default=False)
-    is_buyer=models.BooleanField(default=False)
     
 class Property_Type(models.Model):
     name= models.CharField(max_length=250,unique=True)
@@ -27,12 +26,12 @@ class Address(models.Model):
     
 
 class Property(models.Model):
-    owner=models.ForeignKey(User,on_delete=models.CASCADE,related_name='properties')
+    agent=models.ForeignKey(User,on_delete=models.CASCADE,related_name='properties')
     Property_Type=models.ForeignKey(Property_Type,on_delete=models.SET_NULL,null=True)
     title=models.CharField(max_length=100)
     description=models.TextField()
     price=models.DecimalField(max_digits=20,decimal_places=2)
-    sq_feet=models.DecimalField(max_digits=12,decimal_places=2)
+    sq_feet=models.DecimalField(max_digits=12,decimal_places=2,null=True)
     address=models.OneToOneField(Address,on_delete=models.CASCADE)
     is_available=models.BooleanField(default=True)
     bedroom=models.PositiveSmallIntegerField(default=1)

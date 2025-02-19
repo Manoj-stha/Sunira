@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "base",
     "corsheaders",
     'rest_framework',
+    'rest_framework_simplejwt',
+
 ]
 
 MIDDLEWARE = [
@@ -54,6 +56,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "sunirabackend.urls"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 TEMPLATES = [
     {
@@ -73,7 +82,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "sunirabackend.wsgi.application"
 AUTH_USER_MODEL = 'base.User'
+from datetime import timedelta
 
+SIMPLE_JWT = {
+    "USER_ID_FIELD":'username',
+    'ALGORITHM': 'HS256',  # Specify the algorithm for signing (HS256 is default)
+    'SIGNING_KEY': SECRET_KEY,  # This is the key used to sign JWTs (default is SECRET_KEY)
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Access token lifetime
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=15),  # Refresh token lifetime
+    'ROTATE_REFRESH_TOKENS': False,  # Set to True if you want to rotate refresh tokens
+    'BLACKLIST_AFTER_ROTATION': False,  # Whether to blacklist the old refresh token after rotation
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
