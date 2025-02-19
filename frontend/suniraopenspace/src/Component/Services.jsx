@@ -5,29 +5,33 @@ import { TbZodiacLibra } from "react-icons/tb";
 
 const Services = () => {
   return (
-    <div className="py-16 px-6 bg-gray-50">
+    <div className="py-20 px-6 bg-gray-50">
       {/* Header */}
-      <div className="flex justify-center items-center mb-12">
-        <div className="bg-gradient-to-r from-blue-700 to-blue-900 text-white px-8 py-6 rounded-2xl shadow-xl flex items-center justify-center">
-          <h2 className="text-4xl font-extrabold tracking-wide">Our</h2>
-          <span className="text-amber-300 text-4xl font-extrabold ml-2">
+      <div className="flex flex-col justify-center items-center mb-8 pb-10">
+        <div className=" text-blue-500 px-6 py-2 flex items-center justify-center ">
+          <h2 className="text-3xl font-bold tracking-wide">Our</h2>
+          <span className="text-orange-400 text-3xl font-bold ml-2">
             Services
           </span>
+        </div>
+        <div>
+          <h1 className="text-5xl font-bold font-">Get Our Best Services For Your
+          Business Growth</h1>
         </div>
       </div>
 
       {/* Service Cards Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
+      <div className="flex flex-wrap justify-center gap-10 p-5">
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-2xl p-8 transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl flex flex-col items-center text-center"
+            className="bg-white shadow-md rounded-xl p-5 w-[25rem] h-[15rem] pt-11 transition-transform duration-300 transform hover:scale-105 hover:shadow-lg flex flex-col items-center text-center"
           >
-            <service.icon className={`h-20 w-20 ${service.color} mb-4`} />
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+            <service.icon className={`h-14 w-14 ${service.color} mb-3`} />
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">
               {service.title}
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-snug">
               {service.description}
             </p>
           </div>
@@ -42,28 +46,28 @@ const servicesData = [
   {
     title: "Legal Solution",
     description:
-      "Get expert legal advice and solutions tailored to your needs.",
+      "Expert legal advice tailored to your needs.",
     icon: GoLaw,
     color: "text-blue-500",
   },
   {
     title: "Astrology Consultation",
     description:
-      "Discover insights into your future with expert astrology readings.",
+      "Insights into your future with expert astrology.",
     icon: TbZodiacLibra,
     color: "text-amber-500",
   },
   {
     title: "Real Estate Solutions",
     description:
-      "Find, buy, or sell properties with professional real estate services.",
+      "Find, buy, or sell properties professionally.",
     icon: MdOutlineRealEstateAgent,
     color: "text-green-500",
   },
   {
     title: "Mediation",
     description:
-      "Resolve disputes amicably with professional mediation services.",
+      "Resolve disputes amicably with professional help.",
     icon: FaPeace,
     color: "text-pink-500",
   },
