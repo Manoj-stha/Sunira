@@ -19,10 +19,10 @@ export function Hero() {
             Empowering businesses with smart and effective solutions.
           </p>
 
-          <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-800 rounded-xl shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
+          <button className="px-8 py-4 text-lg font-semibold bg-white text-blue-800 rounded-xl shadow-lg cursor-pointer hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
             Schedule a Consultation
           </button>
-        </div>
+        </div> 
       </div>
     </div>
   );
