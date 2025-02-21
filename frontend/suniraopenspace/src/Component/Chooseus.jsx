@@ -6,7 +6,7 @@ const ChooseUs = () => {
       <div className="flex flex-col lg:flex-row items-center gap-12 ">
         <div className="lg:w-1/2 ">
           <div className=" ">
-            <h2 className="text-[60px] font-bold text-blue-700">
+            <h2 className="text-[60px] font-bold text-blue-500">
               Why Choose Us?
             </h2>
             <h3 className="text-[33px] pb-2 font-semibold text-gray-800 leading-relaxed">

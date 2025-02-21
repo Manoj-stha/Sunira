@@ -15,6 +15,9 @@ const Navbar = () => {
             <img className="h-16" src={logo} alt="logo" />
           </div>
           <div className="hidden md:flex items-center space-x-6">
+          <a href="/aboutUs" className="text-gray-600 hover:text-blue-600">
+              About Us
+            </a>
             <a href="#" className="text-gray-600 hover:text-blue-600">
               Services
             </a>

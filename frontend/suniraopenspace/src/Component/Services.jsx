@@ -73,7 +73,7 @@ const servicesData = [
   {
     title: "Real Estate Solutions",
     description:
-      "Find, buy, or sell properties professionally.",
+      "Find and buy the properties professionally.",
     icon: MdOutlineRealEstateAgent,
     color: "text-green-500",
     page: "Estate",

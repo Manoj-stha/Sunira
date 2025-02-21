@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
+import faq from "../../assets/faq.svg";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -33,21 +34,23 @@ const Faq = () => {
   ];
 
   return (
-    <div className="">
-      <div className="relative flex flex-col mx-[15rem] pb-[5rem] ">
-        <header className="text-2xl font-semibold px-5 pb-3">
+    <div className="min-h-[70vh] flex flex-col lg:flex-row items-center justify-center bg-gray-50 p-6 lg:p-16 gap-10">
+      {/* FAQ Section */}
+      <div className="flex flex-col max-w-2xl w-full">
+        <header className="text-2xl md:text-3xl font-semibold text-center lg:text-left mb-6">
           Frequently Asked Questions (FAQs)
         </header>
-        <div className="flex flex-col gap-5 p-2 flex-grow">
+
+        <div className="flex flex-col gap-5">
           {Faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="group bg-white w-[40rem] flex flex-col rounded-lg cursor-pointer shadow-md transition-transform duration-300 hover:scale-100 hover:shadow-lg border-2 border-gray-200 hover:border-gray-300"
+              className="group bg-white flex flex-col rounded-lg cursor-pointer shadow-md transition-transform duration-300 hover:scale-105 border-2 border-gray-200 hover:border-gray-300"
               onClick={() => toggleFaq(index)}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
             >
               <div className="flex items-center justify-between px-5 py-4">
-                <h3 className="font-medium">{faq.title}</h3>
+                <h3 className="font-medium text-lg">{faq.title}</h3>
                 <IoIosArrowDropdownCircle
                   className={`text-2xl text-gray-500 transform transition-transform duration-300 ${
                     activeIndex === index
@@ -63,7 +66,7 @@ const Faq = () => {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="px-5 pb-4 text-gray-600"
+                    className="px-5 pb-4 text-gray-600 text-sm md:text-base"
                   >
                     {faq.description}
                   </motion.p>
@@ -72,6 +75,15 @@ const Faq = () => {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      {/* Image Section */}
+      <div className="flex justify-center items-center w-full lg:w-1/2">
+        <img
+          src={faq}
+          alt="FAQ Illustration"
+          className="w-72 h-72 md:w-96 md:h-96 object-contain"
+        />
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ const Home = () => {
       <Testimonials />
       <SemiFooter />
       <Footer />
+      <footer className="fixed bottom-0 left-0 w-full  bg-gradient-to-r from-[#131F38] to-[#101828ea] text-white text-center py-2 "></footer>
     </>
   );
 };
