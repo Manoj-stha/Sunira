@@ -11,6 +11,12 @@ from rest_framework_simplejwt.views import (
 )
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.decorators import api_view,permission_classes
+from rest_framework.pagination import PageNumberPagination
+from django.core.mail import send_mail
+from .forms import EmailForms
+from django.core.mail import send_mail
+
+
 
 
 
@@ -86,3 +92,80 @@ class List_specific(APIView):
         except Exception as e:
             return Response({"not post":"cannot post the list",
                              "error":str(e)},status=status.HTTP_404_NOT_FOUND)
+            
+@api_view(['GET'])
+def search(request,title):
+    try:
+        property=models.Property.objects.filter(title=title)
+        serializer=serializers.PropertySerializer(property,many=True)
+        return Response(serializer.data,status=status.HTTP_202_ACCEPTED)
+    except Exception as e:
+        return Response(str(e))
+
+@api_view(['POST'])
+def create_post(request):
+    serializers= serializers.PostSerializers(data=request.data) 
+    if serializers.is_valid():
+        serializers.save()
+        return Response(serializers.data)
+    return Response(serializers.errors)  
+
+
+@api_view(['GET'])
+def post_list(request):
+    page_number = int(request.GET.get('page', 1))
+    page_size = int(request.GET.get('page_size', 5))
+    posts = models.Post.published.all()
+    
+    if not posts:  
+        return Response({"detail": "No posts found"}, status=204)
+    
+    paginator = PageNumberPagination()
+    paginator.page=page_number
+    paginator.page_size = page_size
+    pagianted_post = paginator.paginate_queryset(posts, request)
+    serializer = serializers.PostSerializers(pagianted_post, many=True)
+    return paginator.get_paginated_response(serializer.data)
+
+@api_view(['GET'])
+def post_Draft(request):
+   
+    posts = models.Post.objects.filter(status="DF")
+    
+    if not posts:  
+        return Response({"detail": "No posts found"}, status=204)
+
+   
+    serializer = serializers.PostSerializers(posts, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def post_share(request, post_id):
+    print(post_id)
+    try:
+        print("ya sammma pni aayo")
+        post = get_object_or_404(models.Post, id=post_id)
+        
+       
+        form = EmailForms(request.data)
+        
+        
+        if form.is_valid():
+           
+            cd = form.cleaned_data
+            subject = f"Check out this blog post: {post.title}"
+            message = f"Hi,\n\nI wanted to share this blog post with you:\n\nTitle: {post.title}\n\n{post.body}\n\nCheck it out!"
+            from_email =cd['email'] #settings.DEFAULT_FROM_EMAIL  
+            to_email = cd['to']  
+            
+            # Send the email
+            send_mail(subject, message, from_email, [to_email])
+
+            return Response({"detail": "Post shared successfully!"}, status=200)
+        else:
+            return Response({"detail": "Invalid form data."}, status=400)
+    
+    except Exception as e:
+        # Handle any errors
+        print("hello error ya aayo")
+        return Response({"detail": str(e)}, status=500)

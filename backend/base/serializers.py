@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Address, Property_Image, Listing, Property,User
+from .models import Address, Property_Image, Listing, Property,User,Post
 from django.contrib.auth import authenticate
 
 
@@ -89,3 +89,9 @@ class PropertySerializer(serializers.ModelSerializer):
         
         property_instance = Property.objects.create(address=address, **validated_data)  
         return property_instance
+
+
+class PostSerializers(serializers.ModelSerializer):
+    class Meta:
+        model=Post
+        fields =['id','title','slug','body','publish','created','updated','status','author']
