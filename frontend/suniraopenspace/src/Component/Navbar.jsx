@@ -28,8 +28,8 @@ const Navbar = () => {
               Team
             </a>
             <div className="flex items-center justify-between space-x-4">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <Link to="/login">Register</Link>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <Link to="/login">LogIn</Link>
               </button>
             </div>
           </div>
