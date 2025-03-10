@@ -11,7 +11,7 @@ const Services = () => {
       nav('/mediation')
     }
     else if(service == "Legal"){
-      nav('/Legal')
+      nav('/legal')
     }
   }
   return (
