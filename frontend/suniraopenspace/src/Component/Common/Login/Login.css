@@ -1,4 +1,4 @@
-/* General Section Styling */
+/* General Section Styling
 .login-section {
     background-color: #eee;
     height:10vh;
@@ -39,7 +39,7 @@
     }
   }
   
-  /* Left Side - Form */
+ 
   .login-form {
     padding: 40px;
   }
@@ -89,7 +89,7 @@
   .login-button {
     width: 100%;
     padding: 12px;
-    /* background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
     background-color: #1B75BB;
     color: white;
     border: none;
@@ -135,10 +135,9 @@
     color: white;
   }
   
-  /* Right Side - Gradient Info */
+  
   .login-info {
-    /* background: rgb(66,149,214);
-background: linear-gradient(90deg, rgba(66,149,214,1) 0%, rgba(33,74,105,0.9304096638655462) 100%); */
+    
 background-color: #1B75BB;
     color: white;
     padding: 40px;
@@ -159,8 +158,7 @@ background-color: #1B75BB;
     font-size: 0.95rem;
     line-height: 1.6;
   }
-  
-  /* Responsive Height Fix */
+
   @media (min-width: 768px) {
     .login-section {
       height: 100vh;
@@ -173,4 +171,4 @@ background-color: #1B75BB;
       border-bottom-right-radius: 16px;
     }
   }
-  
+   */

@@ -27,10 +27,12 @@ const Navbar = () => {
             <a href="#" className="text-gray-600 hover:text-blue-600">
               Team
             </a>
-            <div className="flex items-center justify-between space-x-4">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600">
-                <Link to="/login">LogIn</Link>
+            <div className="flex items-center justify-between space-x-9">
+            <Link to="/login">
+              <button className="bg-blue-500 text-white px-8 py-3 font-bold uppercase rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 cursor-pointer">
+                LogIn
               </button>
+              </Link>
             </div>
           </div>
         </nav>

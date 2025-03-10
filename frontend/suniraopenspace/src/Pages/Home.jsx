@@ -7,6 +7,7 @@ import Services from "../Component/Services";
 import Testimonials from "../Component/Testimonials";
 import { Whatsapp } from "../Component/Whatssapp";
 import {Link } from "react-router-dom"
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Chooseus />
+      <Contact/>
       <Testimonials />
       <SemiFooter />
       <Footer />

@@ -8,8 +8,8 @@ import { FaXTwitter } from "react-icons/fa6";
 const SemiFooter = () => {
   return (
     <div>
-      <section id="contact" className="py-10">
-        <div className="container mx-auto px-6">
+      <section id="contact" className="py-10 ">
+        <div className="container mx-auto px-6 ">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center pl-28">
               <h2 className="text-4xl font-bold mb-8 uppercase pt-2">
