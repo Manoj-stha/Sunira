@@ -6,58 +6,60 @@ import corporate from "../../../assets/Legal service/corporate law.png"
 import advocacy from "../../../assets/Legal service/Legal Consultation & Advocacy.png"
 const LegalService = () => {
   return (
-    <div className="bg-gray-50 pt-16 pb-10">
+    <div className="bg-gray-50 px-[10rem] pt-16 pb-22">
       {/* Header Section */}
-      <div className="flex flex-col items-center gap-5 p-4 text-center">
-        <header className="text-3xl md:text-5xl font-bold">Our Services</header>
-        <p className="text-base md:text-lg text-gray-600 max-w-2xl">
+      <div className="flex flex-col items-center gap-5 mb-5 p-4 text-center">
+        <header className="text-3xl md:text-5xl font-bold text-gray-700">Our Services</header>
+        <p className="text-base md:text-lg text-gray-600 max-w-3xl">
           We provide a wide range of mediation and legal reconciliation
           services, covering family, civil, criminal, and corporate disputes.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="flex flex-wrap gap-5 px-[10rem] items-center justify-center">
+      <div className="flex flex-wrap gap-10 px-[10rem] items-center justify-center">
         {/* Service Item */}
         {[
           {
             image: theft,
-            title: "Family Mediation",
+            title: "Criminal Cases",
             description:
-              "Resolving marital disputes, divorce settlements, child custody agreements, and inheritance conflicts.",
+              "Strong legal defense for fraud, theft, assault, and other offenses, ensuring your rights are protected.",
           },
           {
             image: civil,
-            title: "Workplace & Corporate Mediation",
+            title: "Civil Cases",
             description:
-              "Addressing employee conflicts, contract disputes, and workplace grievances.",
+              " Resolving property disputes, contract breaches, and agreements through negotiation or litigation.",
           },
           {
             image: family,
-            title: "Property & Real Estate Disputes",
+            title: "Family Law",
             description:
-              "Helping individuals and businesses settle land, property, and lease disagreements.",
+              "Legal support for divorce, child custody, alimony, and inheritance with a fair and compassionate approach.",
           },
           {
             image: corporate,
-            title: "Criminal Mediation",
+            title: "Corporate Law",
             description:
-              "Facilitating negotiations in cases where reconciliation is legally viable.",
+              "Assistance with business registration, compliance, and legal matters to keep your company on track.",
           },
           {
             image: advocacy,
-            title: "Community Dispute Resolution",
+            title: "Legal Consultation & Advocacy",
             description:
-              "Encouraging harmony through structured mediation for neighborhood or social conflicts.",
+              "Expert representation in Supreme, High, and District Courts for all legal concerns.",
           },
         ].map((service, index) => (
           <div
             key={index}
-            className="w-[25rem] h-[28rem] flex flex-col items-center gap-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+            className="w-[22rem] h-[25rem] flex flex-col items-center gap-5 p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border border-gray-300"
           >
-            <img src={service.image} alt={service.title} className="w-[30rem] rounded-lg" />
-            <h1 className="font-semibold text-xl text-center">{service.title}</h1>
-            <p className="text-center text-gray-600">{service.description}</p>
+            <div className="max-w-[35rem] overflow-hidden rounded-lg ">
+            <img src={service.image} alt={service.title} className="w-[20rem] rounded-lg transition-transform duration-300 hover:scale-110" />
+            </div>
+            <h1 className="font-semibold text-2xl text-center ">{service.title}</h1>
+            <p className="text-center text-gray-600 ">{service.description}</p>
           </div>
         ))}
       </div>

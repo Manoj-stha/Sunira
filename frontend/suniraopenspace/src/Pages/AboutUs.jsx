@@ -24,7 +24,7 @@ const AboutUs = () => {
         <div className="flex flex-col lg:flex-row gap-10 items-center  w-[80rem]">
           {/* Text Content */}
           <div className="w-full lg:w-1/2 ">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="text-4xl md:text-4xl font-bold mb-4">
               Our Company Approach
             </h3>
             <p className="text-base md:text-lg leading-relaxed">
