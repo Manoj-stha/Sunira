@@ -6,7 +6,7 @@ import corporate from "../../../assets/Legal service/corporate law.png"
 import advocacy from "../../../assets/Legal service/Legal Consultation & Advocacy.png"
 const LegalService = () => {
   return (
-    <div className="bg-gray-50 px-[10rem] pt-16 pb-22">
+    <div className="bg-gray-50 px-[8rem] pt-16 pb-22">
       {/* Header Section */}
       <div className="flex flex-col items-center gap-5 mb-5 p-4 text-center">
         <header className="text-3xl md:text-5xl font-bold text-gray-700">Our Services</header>
@@ -17,7 +17,7 @@ const LegalService = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="flex flex-wrap gap-10 px-[10rem] items-center justify-center">
+      <div className="flex flex-wrap gap-5 px-[10rem] items-center justify-center">
         {/* Service Item */}
         {[
           {
@@ -38,12 +38,7 @@ const LegalService = () => {
             description:
               "Legal support for divorce, child custody, alimony, and inheritance with a fair and compassionate approach.",
           },
-          {
-            image: corporate,
-            title: "Corporate Law",
-            description:
-              "Assistance with business registration, compliance, and legal matters to keep your company on track.",
-          },
+      
           {
             image: advocacy,
             title: "Legal Consultation & Advocacy",
@@ -53,7 +48,7 @@ const LegalService = () => {
         ].map((service, index) => (
           <div
             key={index}
-            className="w-[22rem] h-[25rem] flex flex-col items-center gap-5 p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border border-gray-300"
+            className="w-[18rem] h-[23rem] flex flex-col items-center gap-5 p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border border-gray-300"
           >
             <div className="max-w-[35rem] overflow-hidden rounded-lg ">
             <img src={service.image} alt={service.title} className="w-[20rem] rounded-lg transition-transform duration-300 hover:scale-110" />

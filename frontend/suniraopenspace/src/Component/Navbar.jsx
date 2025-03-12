@@ -29,7 +29,7 @@ const Navbar = () => {
             </a>
             <div className="flex items-center justify-between space-x-9">
             <Link to="/login">
-              <button className="bg-blue-500 text-white px-8 py-3 font-bold uppercase rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 cursor-pointer">
+              <button className="bg-blue-500 text-white px-5 py-2 font-semibold uppercase rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 cursor-pointer text-md">
                 LogIn
               </button>
               </Link>
