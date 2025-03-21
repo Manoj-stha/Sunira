@@ -1,0 +1,26 @@
+#card{
+    position: relative;
+    
+    background-size: cover;
+    background-position: center;
+    background-color: #f7e2b8;
+    /* overflow: hidden; */
+}
+#card::after{
+    content: "";
+    position: absolute;
+    top: 6rem;
+    left: 8rem;
+    width: 100%;
+    height: 100%;
+    
+   /* background-size: 150% 150%;
+   background-repeat: no-repeat;
+   background-position: 5rem 5rem;     */
+   background-image: url('https://png.pngtree.com/png-vector/20220607/ourmid/pngtree-astrology-horoscope-circle-with-zodiac-signs-vector-background-png-image_4852820.png');
+   /* background-size: cover;
+   background-position: center; */
+    opacity: 0.1;
+   z-index: 1; /* Keeps it behind the content */
+    
+}

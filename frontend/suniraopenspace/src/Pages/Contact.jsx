@@ -1,13 +1,18 @@
 import React from 'react'
 import ContactUs from '../Component/Global/ContactUs'
+import contact from "../assets/contact.png"
+import Navbar from '../Component/Navbar'
 
 const Contact = () => {
   return (
-    <div className='flex justify-around items-center '>
+    <div>
+      <Navbar/>
+    <div className='flex gap-20 h-[88vh] justify-center items-center '>
         <div>
-            This is our Contact us page.
+            <img src={contact} className='w-[50rem]'/>
         </div>
       <ContactUs/>
+    </div>
     </div>
   )
 }

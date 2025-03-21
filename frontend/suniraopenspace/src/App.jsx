@@ -7,6 +7,7 @@ import LoginAndRegister from "../src/Component/Common/Login/LoginPage/LoginAndRe
 import ContactUs from "./Component/Global/ContactUs"
 import Contact from "./Pages/Contact"
 import Legal from "./Component/Services/Legal";
+import Astrology from "./Component/Services/Astrology";
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/legal" element={<Legal/>}/>
+        <Route path="/astrology" element={<Astrology/>}/>
+        
       </Routes>
     </Router>
     </>

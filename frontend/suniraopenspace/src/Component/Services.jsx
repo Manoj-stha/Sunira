@@ -7,11 +7,13 @@ import { useNavigate } from "react-router-dom";
 const Services = () => {
     const nav=useNavigate()
   const handleServices = (service)=>{
-    if(service == "Mediation"){
-      nav('/mediation')
-    }
-    else if(service == "Legal"){
-      nav('/legal')
+    switch(service){
+      case "Mediation": nav('/mediation');
+      break;
+      case "Legal": nav('/legal');
+      break;
+      case "Astrology": nav('/astrology');
+      break;
     }
   }
   return (

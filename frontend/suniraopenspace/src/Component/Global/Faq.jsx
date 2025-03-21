@@ -34,9 +34,9 @@ const Faq = () => {
   ];
 
   return (
-    <div className="min-h-[70vh] flex flex-col lg:flex-row items-center justify-center bg-gray-50 p-6 lg:p-16 gap-10">
+    <div className="min-h-[70vh] flex flex-col lg:flex-row items-center justify-center px-[20rem] gap-10">
       {/* FAQ Section */}
-      <div className="flex flex-col max-w-2xl w-full">
+      <div className="flex flex-col max-w-2xl w-full ">
         <header className="text-2xl md:text-3xl font-semibold text-center lg:text-left mb-6">
           Frequently Asked Questions (FAQs)
         </header>
@@ -78,7 +78,7 @@ const Faq = () => {
       </div>
 
       {/* Image Section */}
-      <div className="flex justify-center items-center w-full lg:w-1/2">
+      <div className="flex justify-center items-center w-full  ">
         <img
           src={faq}
           alt="FAQ Illustration"

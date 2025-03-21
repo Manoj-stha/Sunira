@@ -59,7 +59,7 @@ const MeetOurTeam = () => {
   return (
     <div className="py-16 px-[16rem] ">
       {/* Section Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 ">
         <h2 className="text-4xl font-bold text-blue-700">
           Meet <span className="text-orange-500">Our Team</span>
         </h2>
@@ -69,33 +69,32 @@ const MeetOurTeam = () => {
       </div>
 
       {/* Advisory Team Section */}
-      <div className="mb-10">
+      <div className="mb-10 ">
         <h3 className="text-3xl font-semibold text-gray-800 text-center">
           Adviser Team
         </h3>
 
         {/* Team Grid */}
-        <div className="flex flex-wrap justify-center gap-10 p-10">
+        <div className="flex flex-wrap w-full gap-10 p-10 justify-center ">
           {advisoryTeam.map((member, index) => (
             <div
               key={index}
-              className="group bg-white w-[20rem] h-[28rem] gap-2 shadow-lg rounded-lg text-center transition-transform duration-200 hover:shadow-xl flex flex-col items-center pt-3 border-2 border-gray-200 cursor-default"
+              className="group  w-[16rem] h-[19rem] gap-2 rounded-md   text-start transition-transform duration-200 flex flex-col  cursor-default "
             >
-              <div className="w-full h-[15rem] px-3 rounded-lg group-hover:border-white ">
-                <div className="w-full h-[15rem] overflow-hidden rounded-lg">
+              <div className="w-full h-[14rem]  group-hover:border-white ">
+                <div className="w-full h-[14rem] rounded-md overflow-hidden ">
                 <img
                   src={member.image}
-                  className="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover rounded-md  transition-transform duration-300 hover:scale-110"
                   />
                   </div>
               </div>
-              <div className="mt-3 ">
+              <div className="mt-2 flex flex-col  text-center">
 
               <h4 className="text-lg font-semibold text-gray-900 ">
                 {member.name}
               </h4>
               <p className="text-gray-600 ">{member.location}</p>
-              <p className="text-gray-500 w-[15rem] mt-2 italic ">"{member.quote}"</p>
               </div>
             </div>
           ))}

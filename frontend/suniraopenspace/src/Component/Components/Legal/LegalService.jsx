@@ -1,65 +1,27 @@
-import React from "react";
-import theft from "../../../assets/Legal service/theft.png"
-import civil from "../../../assets/Legal service/civil case.png"
-import family from "../../../assets/Legal service/family law.png"
-import corporate from "../../../assets/Legal service/corporate law.png"
-import advocacy from "../../../assets/Legal service/Legal Consultation & Advocacy.png"
+import React from 'react'
+
 const LegalService = () => {
   return (
-    <div className="bg-gray-50 px-[8rem] pt-16 pb-22">
-      {/* Header Section */}
-      <div className="flex flex-col items-center gap-5 mb-5 p-4 text-center">
-        <header className="text-3xl md:text-5xl font-bold text-gray-700">Our Services</header>
-        <p className="text-base md:text-lg text-gray-600 max-w-3xl">
+    <div className='flex justify-center items-center text-xl flex-wrap px-10 py-16 bg-gray-100'>
+    <div className='w-[60%] h-[20rem] '>
+    <div className='py-5'> 
+        <h1 className='text-4xl font-semibold text-gray-700'>Our Services</h1>
+        <p className=" text-gray-600 mt-4">
           We provide a wide range of mediation and legal reconciliation
           services, covering family, civil, criminal, and corporate disputes.
         </p>
-      </div>
-
-      {/* Services Grid */}
-      <div className="flex flex-wrap gap-5 px-[10rem] items-center justify-center">
-        {/* Service Item */}
-        {[
-          {
-            image: theft,
-            title: "Criminal Cases",
-            description:
-              "Strong legal defense for fraud, theft, assault, and other offenses, ensuring your rights are protected.",
-          },
-          {
-            image: civil,
-            title: "Civil Cases",
-            description:
-              " Resolving property disputes, contract breaches, and agreements through negotiation or litigation.",
-          },
-          {
-            image: family,
-            title: "Family Law",
-            description:
-              "Legal support for divorce, child custody, alimony, and inheritance with a fair and compassionate approach.",
-          },
-      
-          {
-            image: advocacy,
-            title: "Legal Consultation & Advocacy",
-            description:
-              "Expert representation in Supreme, High, and District Courts for all legal concerns.",
-          },
-        ].map((service, index) => (
-          <div
-            key={index}
-            className="w-[18rem] h-[23rem] flex flex-col items-center gap-5 p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border border-gray-300"
-          >
-            <div className="max-w-[35rem] overflow-hidden rounded-lg ">
-            <img src={service.image} alt={service.title} className="w-[20rem] rounded-lg transition-transform duration-300 hover:scale-110" />
-            </div>
-            <h1 className="font-semibold text-2xl text-center ">{service.title}</h1>
-            <p className="text-center text-gray-600 ">{service.description}</p>
-          </div>
-        ))}
-      </div>
     </div>
-  );
-};
+    <div className='  px-6 text-gray-700'>
+        <ul className='list-disc space-y-2'>
+            <li><span className='font-semibold text-gray-800'>Criminal Cases</span> – Strong legal defense for fraud, theft, assault, and other offenses, ensuring your rights are protected.</li>
+            <li><span className='font-semibold text-gray-800'> Civil Cases</span> – Resolving property disputes, contract breaches, and agreements through negotiation or litigation.</li>
+            <li><span className='font-semibold text-gray-800'>Family Law</span> – Legal support for divorce, child custody, alimony, and inheritance with a fair and compassionate approach.</li>
+            <li><span className='font-semibold text-gray-800'> Legal Consultation & Advocacy</span>– Expert representation in Supreme, High, and District Courts for all legal concerns.</li>
+        </ul>
+    </div>
+    </div>
+    </div>
+  )
+}
 
-export default LegalService;
+export default LegalService
