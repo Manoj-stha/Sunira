@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import "./AstrologyService.css";
 const AstrologyService = () => {
   return (
-    <div className="flex flex-col justify-center items-center px-[18rem] py-[5rem] gap-10">
+    <div className="flex flex-col justify-center items-center px-[18rem] md:px-auto py-[5rem] gap-10">
       <div className="flex flex-col items-center gap-5">
         <header className="text-5xl font-semibold">Astrology Services</header>
         <p className="w-[51vw] text-center text-xl">
@@ -14,7 +14,7 @@ const AstrologyService = () => {
       </div>
 
       {/* service cards layout */}
-      <div className="flex flex-wrap gap-5  w-[51vw]">
+      <div className="flex flex-wrap gap-5  w-[60vw] justify-center">
         {servicesData.map((service, index) => (
           <div
             key={index}
