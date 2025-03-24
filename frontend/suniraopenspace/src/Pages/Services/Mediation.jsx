@@ -8,6 +8,8 @@ import Footer from "../../Component/Footer";
 import Testimonials from "../../Component/Testimonials";
 import MeetOurTeam from "../../Component/MeetOurTeam";
 import Faq from "../../Component/Global/Faq";
+import GoToTop from "../../Component/Common/GoToTop";
+import SocialMediaBox from "../../Component/Common/SocialMediaBox";
 const Mediation = () => {
   return (
     <div>
@@ -16,6 +18,8 @@ const Mediation = () => {
         <img src={group} className="object-cover w-full h-full" />
       </div>
       <About/>
+      <GoToTop/>
+      <SocialMediaBox/>
       <Whatweprovide/>
       <MeetOurTeam/>
       <Testimonials/>

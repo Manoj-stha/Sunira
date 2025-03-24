@@ -1,57 +1,162 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { FaPhoneAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const nav = useNavigate();
+  const handleClick = (link) => {
+    nav(link);
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div>
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="text-lg font-bold">Sunira Open Space</span>
-              </div>
-              <p className="text-gray-400">We Help Find Better Soliutions</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Legal Solutions</li>
-                <li>Astrology Consulatation</li>
-                <li>Real Estate Solutions</li>
-                <li>Mediation</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Services</li>
-                <li>Resons to choose us</li>
-                <li>Testimonials</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-              <p className="text-gray-400 mb-4">
-                Stay updated with our latest news and offers.
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-l-lg w-full"
-                />
-                <button className="bg-blue-600 px-4 py-2 rounded-r-lg cursor-pointer hover:bg-blue-700">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; Sunira Open Space. All rights are reserved</p>
-          </div>
+    <div className="bg-gray-800 text-gray-300  w-full py-10">
+      {/* Top Section */}
+      <div className="w-full max-w-8xl px-5 md:px-[10rem] lg:px-[18rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 ">
+        {/* Company Info */}
+        <div className="flex flex-col gap-2 sm:text-left text-left ">
+          <header className="font-bold text-xl">Sunira Open Space</header>
+          <p>We Help Find Better Solutions</p>
         </div>
-      </footer>
+
+        {/* Quick Links */}
+        <div className="flex flex-col gap-4 text-left ">
+          <header className="font-bold text-lg">Quick Links</header>
+          <ul className="space-y-2">
+            <li
+              onClick={() => handleClick("/")}
+              className="cursor-pointer hover:underline"
+            >
+              Home
+            </li>
+            <li
+              onClick={() => handleClick("/aboutus")}
+              className="cursor-pointer hover:underline"
+            >
+              About Us
+            </li>
+            <li
+              onClick={() => handleClick("/services")}
+              className="cursor-pointer hover:underline"
+            >
+              Services
+            </li>
+            <li
+              onClick={() => handleClick("/blog")}
+              className="cursor-pointer hover:underline"
+            >
+              Blog
+            </li>
+            <li
+              onClick={() => handleClick("/team")}
+              className="cursor-pointer hover:underline"
+            >
+              Team
+            </li>
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div className="flex flex-col gap-4 text-left ">
+          <header className="font-bold text-lg">Services</header>
+          <ul className="space-y-2">
+            <li
+              onClick={() => handleClick("/legal")}
+              className="cursor-pointer hover:underline"
+            >
+              Legal Service
+            </li>
+            <li
+              onClick={() => handleClick("/astrology")}
+              className="cursor-pointer hover:underline"
+            >
+              Astrology Service
+            </li>
+            <li
+              onClick={() => handleClick("/realestate")}
+              className="cursor-pointer hover:underline"
+            >
+              Real Estate Service
+            </li>
+            <li
+              onClick={() => handleClick("/mediation")}
+              className="cursor-pointer hover:underline"
+            >
+              Mediation
+            </li>
+          </ul>
+        </div>
+
+        {/* useful links */}
+        <div className="flex flex-col gap-4 text-left ">
+          <header className="font-bold text-lg">Useful Links</header>
+          <ul className="space-y-2">
+            <li className="cursor-pointer hover:underline">
+              <a href="https://mediationcouncil.gov.np/" target="_blank">
+                {" "}
+                Mediation Council{" "}
+              </a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <a href="https://lawcommission.gov.np/" target="_blank"> Nepal Law Commission </a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <a href="https://admincourt.gov.np/" target="_blank"> Administrative Court </a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <a href="https://nepalbarcouncil.org.np/" target="_blank"> Nepal Bar Council </a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <a href="https://www.moljpa.gov.np/" target="_blank"> Ministry of Law, justice and Parliament </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex flex-col gap-4 text-left ">
+          <header className="text-lg font-bold">Contact Info</header>
+          <ul className="flex flex-col gap-2">
+            <li className="flex justify-start items-center gap-2">
+              <FaLocationDot />
+              <span>Itahari-4, Sunsari</span>
+            </li>
+            <li className="flex justify-start items-center gap-2">
+              <IoMdMail />
+              <span>consulting@gmail.com</span>
+            </li>
+            <li className="flex justify-start items-center gap-2">
+              <FaPhoneAlt />
+              <span>+977 9842326548</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Newsletter Subscription (Same Row) */}
+        {/* <div className="flex flex-col gap-4 text-left ">
+          <header className="text-lg font-bold">Subscribe for Newsletter</header>
+          <p className="py-1">Sign up and get notified.</p>
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              className="w-full sm:w-auto rounded-l-lg px-3 py-2 text-gray-300 bg-gray-900 outline-none"
+            />
+            <button className="bg-blue-500 px-5 py-2 rounded-r-lg hover:bg-blue-600 cursor-pointer text-white">
+              Go
+            </button>
+          </div>
+        </div> */}
+      </div>
+
+      {/* Bottom Section */}
+      <div className="text-center w-full border-t border-gray-700 mt-8 pt-5">
+        <p>
+          &copy; {new Date().getFullYear()} Sunira Open Space. All rights
+          reserved.
+        </p>
+      </div>
     </div>
   );
 };

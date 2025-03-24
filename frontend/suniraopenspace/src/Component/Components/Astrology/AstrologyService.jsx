@@ -33,9 +33,9 @@ const AstrologyService = () => {
               </h3>
             </div>
             <p>{service.description}</p>
-            <div className=" bg-orange-400 py-2 w-[9rem] mt-1 rounded-4xl flex justify-center  text-white hover:bg-blue-500 cursor-pointer">
+            <div className=" bg-orange-400 py-2 w-[8rem] mt-1 rounded-4xl flex justify-center  text-white hover:bg-blue-500 cursor-pointer">
 
-            <button className="flex items-center gap-2 cursor-pointer">Learn More <FaArrowRight/></button>
+            <button className="flex items-center gap-2 cursor-pointer font-semibold">Buy Now <FaArrowRight/></button>
             </div>
           </div>
         ))}

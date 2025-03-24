@@ -8,6 +8,7 @@ import ContactUs from "./Component/Global/ContactUs"
 import Contact from "./Pages/Contact"
 import Legal from "./Component/Services/Legal";
 import Astrology from "./Component/Services/Astrology";
+import RealEstate from "./Component/Services/RealEstate";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/legal" element={<Legal/>}/>
         <Route path="/astrology" element={<Astrology/>}/>
+        <Route path="/realestate" element={<RealEstate/>}/>
         
       </Routes>
     </Router>

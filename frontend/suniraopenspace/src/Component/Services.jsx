@@ -9,10 +9,16 @@ const Services = () => {
   const handleServices = (service)=>{
     switch(service){
       case "Mediation": nav('/mediation');
+      window.scrollTo(0, 0);
       break;
       case "Legal": nav('/legal');
+      window.scrollTo(0, 0);
       break;
       case "Astrology": nav('/astrology');
+      window.scrollTo(0, 0);
+      break;
+      case "estate": nav('/realestate');
+      window.scrollTo(0, 0);
       break;
     }
   }
