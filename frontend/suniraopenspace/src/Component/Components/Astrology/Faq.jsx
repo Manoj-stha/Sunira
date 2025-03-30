@@ -34,10 +34,10 @@ const Faq = () => {
   ];
 
   return (
-    <div className="min-h-[70vh] flex flex-col lg:flex-row items-center justify-center px-[20rem] gap-10">
+    <div className="min-h-[70vh] flex flex-wrap items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 gap-10 py-10">
       {/* FAQ Section */}
-      <div className="flex flex-col max-w-2xl w-full ">
-        <header className="text-2xl md:text-3xl font-semibold text-center lg:text-left mb-6">
+      <div className="flex flex-col w-full max-w-2xl">
+        <header className="text-xl sm:text-2xl md:text-3xl font-semibold text-center lg:text-left mb-6">
           Frequently Asked Questions (FAQs)
         </header>
 
@@ -49,10 +49,10 @@ const Faq = () => {
               onClick={() => toggleFaq(index)}
               whileHover={{ scale: 1.03 }}
             >
-              <div className="flex items-center justify-between px-5 py-4">
-                <h3 className="font-medium text-lg">{faq.title}</h3>
+              <div className="flex items-center justify-between px-4 sm:px-5 py-4">
+                <h3 className="font-medium text-md sm:text-lg">{faq.title}</h3>
                 <IoIosArrowDropdownCircle
-                  className={`text-2xl text-gray-500 transform transition-transform duration-300 ${
+                  className={`text-xl sm:text-2xl text-gray-500 transform transition-transform duration-300 ${
                     activeIndex === index
                       ? "rotate-180 text-gray-900"
                       : "group-hover:text-gray-900"
@@ -66,7 +66,7 @@ const Faq = () => {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="px-5 pb-4 text-gray-600 text-sm md:text-base"
+                    className="px-4 sm:px-5 pb-4 text-gray-600 text-sm md:text-base"
                   >
                     {faq.description}
                   </motion.p>
@@ -78,11 +78,11 @@ const Faq = () => {
       </div>
 
       {/* Image Section */}
-      <div className="flex justify-center items-center w-full  ">
+      <div className="flex justify-center items-center w-full lg:w-auto">
         <img
           src={faq}
           alt="FAQ Illustration"
-          className="w-72 h-72 md:w-96 md:h-96 object-contain"
+          className="w-48 sm:w-64 md:w-72 lg:w-80 xl:w-96 h-auto object-contain"
         />
       </div>
     </div>

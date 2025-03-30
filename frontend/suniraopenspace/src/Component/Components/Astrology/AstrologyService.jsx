@@ -6,7 +6,7 @@ const AstrologyService = () => {
   return (
     <div className="flex flex-col justify-center items-center px-[18rem] md:px-auto py-[5rem] gap-10">
       <div className="flex flex-col items-center gap-5">
-        <header className="text-5xl font-semibold">Astrology Services</header>
+        <header className="text-5xl font-semibold text-center">Astrology Services</header>
         <p className="w-[51vw] text-center text-xl">
           Our expert astrologers analyze celestial movements to provide deep
           insights into your life. We offer the following services:

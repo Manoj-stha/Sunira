@@ -17,7 +17,7 @@ const Services = () => {
       case "Astrology": nav('/astrology');
       window.scrollTo(0, 0);
       break;
-      case "estate": nav('/realestate');
+      case "Estate": nav('/realestate');
       window.scrollTo(0, 0);
       break;
     }

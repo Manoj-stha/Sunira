@@ -6,17 +6,26 @@ const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const options = {
-    category1: ["House For Sale", "Land For Sale", "Apartment For Sale", "Bussiness & Shop For Sale"],
-    category2: ["House For Rent", "Land For Rent", "Apartment For Sale", "Office Space"]
+    category1: [
+      "House For Sale",
+      "Land For Sale",
+      "Apartment For Sale",
+      "Bussiness & Shop For Sale",
+    ],
+    category2: [
+      "House For Rent",
+      "Land For Rent",
+      "Apartment For Sale",
+      "Office Space",
+    ],
   };
 
   return (
-    <div className="flex my-24 gap-10 justify-center">
-      <div className="flex shadow-xl">
-        <div className="flex bg-gray-200 h-[6vh] rounded-l-lg justify-center items-center">
+    <div className="flex flex-col md:flex-row mt-20 md:mt-40 mb-5 gap-5 md:gap-10 justify-center items-center px-4 space-y-4 md:space-y-0">
+      <div className="flex flex-col md:flex-row shadow-xl w-full md:w-auto gap-4 md:gap-0">
+        <div className="flex flex-col md:flex-row rounded-lg justify-center items-center w-full md:w-auto gap-4 md:gap-0">
           {/* Dropdown */}
-          <div className="relative w-52 border-r border-gray-400">
-
+          <div className="relative w-full md:w-52 border border-gray-400">
             {/* Dropdown Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -28,11 +37,13 @@ const Search = () => {
               </span>
             </button>
 
-            {/* Dropdown Menu with Smooth Transition */}
+            {/* Dropdown Menu */}
             {isOpen && (
-              <ul className="absolute w-64 bg-white border border-gray-300 rounded-md shadow-md mt-1 z-10 transition-all duration-200">
+              <ul className="absolute w-full md:w-64 bg-white border border-gray-300 rounded-md shadow-md mt-1 z-10 transition-all duration-200">
                 {/* Category 1 */}
-                <li className="px-4 py-2 text-gray-700 font-semibold bg-gray-200">For Sale</li>
+                <li className="px-4 py-2 text-gray-700 font-semibold bg-gray-200">
+                  For Sale
+                </li>
                 {options.category1.map((option, index) => (
                   <li
                     key={index}
@@ -47,7 +58,9 @@ const Search = () => {
                 ))}
 
                 {/* Category 2 */}
-                <li className="px-4 py-2 text-gray-700 font-semibold bg-gray-200">For Rent</li>
+                <li className="px-4 py-2 text-gray-700 font-semibold bg-gray-200">
+                  For Rent
+                </li>
                 {options.category2.map((option, index) => (
                   <li
                     key={index}
@@ -65,28 +78,28 @@ const Search = () => {
           </div>
 
           {/* Search Input */}
-          <div className="flex px-2">
+          <div className="flex w-full md:w-auto border border-gray-400 h-[2.6rem]">
             <input
               placeholder="Type any Keyword"
-              className="outline-none flex justify-center items-center w-[30vw] px-2"
+              className="outline-none w-full md:w-[30vw] px-2 h-[2.6rem]"
             />
           </div>
         </div>
 
         {/* Search Button */}
-        <div className="flex">
-          <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-xl px-10 h-full text-white font-semibold rounded-r-sm">
+        <div className="flex h-[2.6rem]">
+          <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-xl px-6 md:px-10 h-full py-2 text-white font-semibold rounded-r-md w-full md:w-auto">
             Search
           </button>
         </div>
       </div>
 
       {/* Categories Dropdown */}
-      <div className="relative px-2">
+      <div className="relative w-full md:w-auto px-2">
         <select
           name="type"
           id="type"
-          className="appearance-none bg-white border border-gray-300 text-gray-700 px-4 py-2 pr-8 h-full outline-none rounded-md shadow-md focus:ring-1"
+          className="appearance-none bg-white border border-gray-300 text-gray-700 px-4 py-2 pr-8 h-full outline-none rounded-md shadow-md focus:ring-1 w-full md:w-auto"
         >
           <option value={""} disabled>
             Order By

@@ -18,6 +18,7 @@
     "formik": "^2.4.6",
     "framer-motion": "^12.4.7",
     "lottie-react": "^2.4.1",
+    "lucide-react": "^0.484.0",
     "rc-progress": "^4.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

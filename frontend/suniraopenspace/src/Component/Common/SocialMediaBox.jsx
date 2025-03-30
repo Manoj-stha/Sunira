@@ -15,14 +15,14 @@ const SocialMediaBox = () => {
   ];
 
   return (
-    <div className="fixed bottom-45 left-[1px] bg-gray-900 p-2 rounded-lg shadow-lg flex flex-col gap-3 z-10">
+    <div className="fixed bottom-24 md:left-4 lg:left-1 bg-gray-900 p-2 md:p-3 rounded-lg shadow-lg flex flex-col gap-3 z-10">
       {socialLinks.map((social, index) => (
         <a
           key={index}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center p-3 rounded-md text-white transition-transform transform hover:scale-110"
+          className="flex items-center justify-center p-2 md:p-3 lg:p-4 rounded-md text-white transition-transform transform hover:scale-110"
           style={{ backgroundColor: social.color }}
           data-tooltip-id={`tooltip-${index}`}
           data-tooltip-content={social.name}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
-import faq from "../../assets/faq.svg";
+import faq from "../../../assets/faq.svg";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -12,29 +12,29 @@ const Faq = () => {
 
   const Faqs = [
     {
-      title: "What types of cases can be resolved through mediation?",
+      title: "What services do you offer in real estate?",
       description:
-        "Mediation is suitable for family disputes, property conflicts, workplace disagreements, contractual issues, and even some criminal cases where reconciliation is possible.",
+        "We provide a wide range of real estate services, including buying, selling, renting, property management, and real estate investment consultation. Whether you're looking for a new home, selling a property, or need expert advice, we are here to help.",
     },
     {
-      title: "How long does mediation take?",
+      title: "How do I determine the right price for my property?",
       description:
-        "The process varies depending on the complexity of the case, but most mediations are resolved in weeks or even days, compared to months or years in court.",
+        "Our team conducts a comprehensive market analysis considering location, property condition, recent sales in the area, and current market trends. We ensure that your property is competitively priced to attract buyers while maximizing your return.",
     },
     {
-      title: "Is mediation legally binding?",
+      title: "Do you assist with home loans and financing?",
       description:
-        "Yes, once both parties reach an agreement, it can be made legally enforceable through proper documentation and registration.",
+        "Yes! We work with trusted mortgage lenders and financial institutions to help you find the best loan options. Our team can guide you through the financing process, from pre-approval to finalizing your mortgage.",
     },
     {
-      title: "How confidential is mediation?",
+      title: "How long does it take to buy or sell a home?",
       description:
-        "Mediation is completely confidential, and nothing discussed can be used in court unless both parties agree.",
+        "The timeline varies depending on market conditions, property demand, and legal processes. On average, selling a home can take a few weeks to a few months, while buying a home depends on finding the right property and securing financing. We work efficiently to speed up the process while ensuring a smooth transaction.",
     },
   ];
 
   return (
-    <div className="min-h-[70vh] flex flex-wrap items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 gap-10 py-10">
+    <div className="min-h-[70vh] flex flex-wrap items-center justify-center px-6 md:px-12 lg:px-32 xl:px-40 gap-10 py-10">
       {/* FAQ Section */}
       <div className="flex flex-col w-full max-w-2xl">
         <header className="text-xl sm:text-2xl md:text-3xl font-semibold text-center lg:text-left mb-6">
