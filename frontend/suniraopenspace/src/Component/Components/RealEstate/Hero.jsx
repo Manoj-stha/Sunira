@@ -3,7 +3,7 @@ import hero from "../../../assets/Real estate/hero.png";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="mb-52">
       {/* Image Section */}
       <div className="bg-red-500 w-full h-[80vh] flex justify-end relative">
         <img src={hero} className="w-full h-[80vh] object-cover" />

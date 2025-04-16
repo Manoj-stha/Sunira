@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import listingData from "./PremiumList"
 import {
   FaPlus,
   FaBed,
@@ -7,7 +8,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
-import second from "../../../assets/Real estate/second.png";
+
 
 const PremiumListing = () => {
   const scrollRef = useRef(null);
@@ -111,78 +112,6 @@ const PremiumListing = () => {
   );
 };
 
-// Listing Data
-export const listingData = [
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 8,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 12,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 10,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 9,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 7,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 11,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-  {
-    img: second,
-    title: "House for sale",
-    location: "Itahari, Sunsari",
-    date: "2081/05/06",
-    price: "Rs. 13,00,000",
-    land: "5 kattha",
-    bed: "2 Bed",
-    car: "2 Car parking",
-  },
-];
+
 
 export default PremiumListing;

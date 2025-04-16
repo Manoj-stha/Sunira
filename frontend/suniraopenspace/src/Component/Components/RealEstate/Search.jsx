@@ -21,7 +21,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row mt-20 md:mt-40 mb-5 gap-5 md:gap-10 justify-center items-center px-4 space-y-4 md:space-y-0">
+    <div className="flex flex-col md:flex-row mt-10 md:mt-10 mb-5 gap-5 md:gap-10 justify-center items-center px-4 space-y-4 md:space-y-0">
       <div className="flex flex-col md:flex-row shadow-xl w-full md:w-auto gap-4 md:gap-0">
         <div className="flex flex-col md:flex-row rounded-lg justify-center items-center w-full md:w-auto gap-4 md:gap-0">
           {/* Dropdown */}

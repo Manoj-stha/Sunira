@@ -9,7 +9,8 @@ import Contact from "./Pages/Contact"
 import Legal from "./Component/Services/Legal";
 import Astrology from "./Component/Services/Astrology";
 import RealEstate from "./Component/Services/RealEstate";
-
+import ListingDetails from "./Component/Components/RealEstate/ListingDetails"
+import TopListingDescription from "./Component/Components/RealEstate/TopListDescription"
 function App() {
 
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/legal" element={<Legal/>}/>
         <Route path="/astrology" element={<Astrology/>}/>
         <Route path="/realestate" element={<RealEstate/>}/>
+        <Route path="/listing/:id" element={<TopListingDescription />} />
         
       </Routes>
     </Router>
